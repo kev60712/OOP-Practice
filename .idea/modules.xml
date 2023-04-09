@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AdapterPattern/AdapterPattern.iml" filepath="$PROJECT_DIR$/AdapterPattern/AdapterPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FacadePattern/FacadePattern.iml" filepath="$PROJECT_DIR$/FacadePattern/FacadePattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP Practice.iml" filepath="$PROJECT_DIR$/OOP Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ObserverPattern/ObserverPattern.iml" filepath="$PROJECT_DIR$/ObserverPattern/ObserverPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProxyPattern/ProxyPattern.iml" filepath="$PROJECT_DIR$/ProxyPattern/ProxyPattern.iml" />
+    </modules>
+  </component>
+</project>
