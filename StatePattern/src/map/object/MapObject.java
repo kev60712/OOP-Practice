@@ -20,10 +20,6 @@ public abstract class MapObject {
         return icon;
     }
 
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
     public Coord getCoord() {
         return coord;
     }
