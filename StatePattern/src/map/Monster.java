@@ -1,4 +1,6 @@
-package mapObject;
+package map;
+
+import map.state.NormalState;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +16,7 @@ public class Monster extends Role{
     }
 
     @Override
-    protected void roundStart() {
+    public void roundStart() {
         List<Coord> surroundingCoords = this.map.getSurroundingCoord(this.coord);
         List<Coord> emptyCoords = new ArrayList<>();
         for (Coord coord : surroundingCoords) {
@@ -35,7 +37,7 @@ public class Monster extends Role{
     }
 
     @Override
-    protected void move() {
+    public void move() {
         List<Coord> surroundingCoords = this.map.getSurroundingCoord(this.coord);
         List<Coord> availableCoords = new ArrayList<>();
         for (Coord coord : surroundingCoords) {
@@ -59,7 +61,7 @@ public class Monster extends Role{
     }
 
     @Override
-    protected void defaultAttack() {
+    public void defaultAttack() {
         this.map.getCharacter().damage(1);
         System.out.println(this.name + " attacks " + this.map.getCharacter().name);
     }

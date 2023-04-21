@@ -1,6 +1,8 @@
-package mapObject;
+package map;
 
-abstract class Role extends MapObject{
+import map.state.State;
+
+public abstract class Role extends MapObject{
 
     protected String name;
     protected int maxHp;
@@ -12,11 +14,11 @@ abstract class Role extends MapObject{
         this.name = name;
     }
 
-    abstract protected void roundStart();
+    public abstract void roundStart();
 
-    abstract protected void move();
+    public abstract void move();
 
-    abstract protected void defaultAttack();
+    public abstract void defaultAttack();
 
     public void takeTurn(){
         displayInformation();
@@ -27,7 +29,7 @@ abstract class Role extends MapObject{
         this.state.attack();
     }
 
-    protected void damage(int damage) {
+    public void damage(int damage) {
         this.state.damage(damage);
         if (isDead()) {
             this.destroy();
@@ -38,7 +40,6 @@ abstract class Role extends MapObject{
         this.map.removeObject(this);
         System.out.println(String.format("%s is dead.", this.name));
     }
-
 
     public void updateState(State state){
         this.state = state;
@@ -54,7 +55,6 @@ abstract class Role extends MapObject{
                 this.name, this.hp, this.state.getClass().getSimpleName()));
     }
 
-
     // Getters and Setters
     public int getMaxHp() {
         return maxHp;
@@ -62,10 +62,6 @@ abstract class Role extends MapObject{
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getHp() {

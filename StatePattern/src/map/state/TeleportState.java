@@ -1,4 +1,6 @@
-package mapObject;
+package map.state;
+
+import map.Role;
 
 public class TeleportState extends TemplateState {
 
@@ -9,7 +11,7 @@ public class TeleportState extends TemplateState {
 
     @Override
     public void exitState(){
-        this.role.map.moveObjToRandomPosition(this.role);
+        this.role.getMap().moveObjToRandomPosition(this.role);
         role.updateState(new NormalState(this.role));
         System.out.println(this.role.getName() + " is now Normal State!!");
     }

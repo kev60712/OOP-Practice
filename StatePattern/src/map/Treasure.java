@@ -1,4 +1,6 @@
-package mapObject;
+package map;
+
+import map.state.*;
 
 public class Treasure extends MapObject{
 

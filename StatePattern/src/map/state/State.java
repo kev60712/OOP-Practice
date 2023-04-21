@@ -1,4 +1,4 @@
-package mapObject;
+package map.state;
 
 public interface State {
 

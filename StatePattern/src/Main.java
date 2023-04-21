@@ -1,6 +1,6 @@
-import mapObject.Character;
-import mapObject.GameMap;
-import mapObject.Monster;
+import map.Character;
+import map.GameMap;
+import map.Monster;
 
 public class Main {
 

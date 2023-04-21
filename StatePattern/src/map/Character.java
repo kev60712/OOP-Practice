@@ -1,4 +1,6 @@
-package mapObject;
+package map;
+
+import map.state.NormalState;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,7 @@ public class Character extends Role {
     }
 
     @Override
-    protected void roundStart() {
+    public void roundStart() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Attack or Move? (a/m)");
         String decision = scanner.nextLine();
@@ -28,7 +30,7 @@ public class Character extends Role {
     }
 
     @Override
-    protected void move() {
+    public void move() {
         Coord coord = null;
         Scanner scanner = new Scanner(System.in);
         String icon = this.icon;
@@ -53,11 +55,12 @@ public class Character extends Role {
 
             if (map.isInMap(coord)) {
                 this.icon = icon;
-                if (map.getObject(coord) == null) {
+                MapObject object = map.getObject(coord);
+                if (object == null) {
                     this.map.moveObject(this, coord);
                     break;
-                } else if (map.getObject(coord) instanceof Treasure) {
-                    Treasure treasure = (Treasure) map.getObject(coord);
+                } else if (object instanceof Treasure) {
+                    Treasure treasure = (Treasure) object;
                     treasure.effect(this);
                     this.map.moveObject(this, coord);
                     break;
@@ -70,7 +73,7 @@ public class Character extends Role {
     }
 
     @Override
-    protected void defaultAttack() {
+    public void defaultAttack() {
         List<MapObject> objectInFront = new ArrayList<>();
         if (this.icon.equals("↑")){
             for (int x = coord.getX(); x > -1; x--){

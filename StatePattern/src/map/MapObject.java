@@ -1,4 +1,4 @@
-package mapObject;
+package map;
 
 abstract class MapObject {
 

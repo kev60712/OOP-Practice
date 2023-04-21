@@ -1,4 +1,4 @@
-package mapObject;
+package map;
 
 public class Obstacle extends MapObject{
 
