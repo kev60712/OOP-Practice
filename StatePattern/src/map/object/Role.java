@@ -1,5 +1,6 @@
-package map;
+package map.object;
 
+import map.GameMap;
 import map.state.State;
 
 public abstract class Role extends MapObject{

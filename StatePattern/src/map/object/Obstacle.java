@@ -1,4 +1,6 @@
-package map;
+package map.object;
+
+import map.GameMap;
 
 public class Obstacle extends MapObject{
 

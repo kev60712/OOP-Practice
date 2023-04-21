@@ -1,8 +1,8 @@
 package map.state;
 
-import map.Character;
-import map.Monster;
-import map.Role;
+import map.object.Character;
+import map.object.Monster;
+import map.object.Role;
 
 import java.util.ArrayList;
 import java.util.List;

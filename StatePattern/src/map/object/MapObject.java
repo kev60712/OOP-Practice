@@ -1,6 +1,8 @@
-package map;
+package map.object;
 
-abstract class MapObject {
+import map.GameMap;
+
+public abstract class MapObject {
 
     protected String icon;
     protected Coord coord;

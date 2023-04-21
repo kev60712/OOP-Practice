@@ -1,6 +1,6 @@
 package map.state;
 
-import map.Role;
+import map.object.Role;
 
 public class InvincibleState extends TemplateState{
 

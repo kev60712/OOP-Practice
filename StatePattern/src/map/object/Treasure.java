@@ -1,5 +1,6 @@
-package map;
+package map.object;
 
+import map.GameMap;
 import map.state.*;
 
 public class Treasure extends MapObject{

@@ -1,5 +1,8 @@
 package map;
 
+import map.object.*;
+import map.object.Character;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

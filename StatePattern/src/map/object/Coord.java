@@ -1,4 +1,4 @@
-package map;
+package map.object;
 
 public class Coord {
     int x;
