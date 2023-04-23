@@ -14,6 +14,10 @@ public class CompositeExporter implements Exporter{
         }
     }
 
+    public CompositeExporter(List<Exporter> exporters) {
+        this.exporters = exporters;
+    }
+
     @Override
     public void exportLog(String log) {
         for (Exporter exporter : exporters) {

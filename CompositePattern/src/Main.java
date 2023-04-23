@@ -4,10 +4,12 @@ import log.exporter.ConsoleExporter;
 import log.exporter.FileExporter;
 import log.layout.StandardLayout;
 
+import java.io.FileNotFoundException;
+
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Logger root = new Logger(Logger.Level.DEBUG,
                 new ConsoleExporter(),
                 new StandardLayout());
@@ -23,11 +25,11 @@ public class Main {
         Logger aiLogger = new Logger(Logger.Level.TRACE,
                 gameLogger, "app.game.ai", new StandardLayout());
 
-//        String filePath = System.getProperty("user.dir") + "/CompositePattern/src/resource/logger_setting.json";
-//        LogFactory.loadLoggersConfig(filePath);
-
         // 配置剛定義好的三個日誌器
         LogFactory.declareLoggers(root, gameLogger, aiLogger);
+
+//        String filePath = System.getProperty("user.dir") + "/CompositePattern/src/resource/logger_setting.json";
+//        LogFactory.loadLoggersConfig(filePath);
 
         // 創建遊戲物件，並執行遊戲
         Game game = new Game();

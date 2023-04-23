@@ -29,6 +29,9 @@ public class Logger {
         }
     }
 
+    public Logger(){
+    }
+
     // For root logger
     public Logger(Level levelThreshold, Exporter exporter, Layout layout) {
         this.level = levelThreshold;
